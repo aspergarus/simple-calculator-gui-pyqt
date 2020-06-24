@@ -1,9 +1,9 @@
 import os
 import re
-import sys  # sys нужен для передачи argv в QApplication
+import sys
 from PyQt5 import QtWidgets
 
-import design  # Это наш конвертированный файл дизайна
+import design
 
 class CalculatorApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
 	storedNumbers = ('', '')
@@ -119,11 +119,11 @@ class CalculatorApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
 
 def main():
 	print("Started")
-	app = QtWidgets.QApplication(sys.argv)  # Новый экземпляр QApplication
+	app = QtWidgets.QApplication(sys.argv)
 	app.setStyle("Fusion")
-	window = CalculatorApp()  # Создаём объект класса ExampleApp
-	window.show()  # Показываем окно
-	app.exec_()  # и запускаем приложение
+	window = CalculatorApp()
+	window.show()
+	app.exec_()
 
-if __name__ == '__main__':  # Если мы запускаем файл напрямую, а не импортируем
-	main()  # то запускаем функцию main()
+if __name__ == '__main__':
+	main()
